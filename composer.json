@@ -1,0 +1,38 @@
+{
+  "name": "yzen.dev/test-bench-transform",
+  "description": "Class-transformer to transform your dataset into a structured object",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "MIT",
+  "keywords": [],
+  "authors": [
+    {
+      "name": "Andey Iatsenko",
+      "email": "yzen.dev@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "yzen.dev/plain-to-class": "dev-feature/cache-v2-php8.1",
+    "eventsauce/object-hydrator": "^1.1",
+    "jane-php/automapper": "^7.4",
+    "phpdocumentor/reflection-docblock": "^5.3",
+    "cuyz/valinor": "^1.2",
+    "spatie/data-transfer-object": "^3.9",
+    "symfony/property-access": "^6.2",
+    "symfony/serializer": "^6.2"
+  },
+  "require-dev": {
+    "phpbench/phpbench": "1.2.8",
+    "phpunit/phpunit": "9.5.28"
+  }
+}
