@@ -8,7 +8,7 @@ use Tests\Full\CuyzVelinorDto\Address\AddressClean;
 
 class PurchaseDto
 {
-    /** @var list<ProductDto> */
+    /** @var array<ProductDto> */
     public array $products;
 
     /** @var UserDto $user */

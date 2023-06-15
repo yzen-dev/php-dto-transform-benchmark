@@ -133,7 +133,6 @@ class FullCheckBench extends TestCase
 
         $autoMapper = AutoMapper::create();
         $object = $autoMapper->map($data, JanePhpDto::class);
-
     }
 
     /**

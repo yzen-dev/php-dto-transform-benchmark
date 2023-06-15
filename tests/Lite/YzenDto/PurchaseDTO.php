@@ -9,6 +9,7 @@ use ClassTransformer\Attributes\ConvertArray;
 class PurchaseDTO
 {
     #[ConvertArray(ProductDTO::class)]
+    /** @var array<ProductDTO> */
     public array $products;
 
     /** @var UserDTO $user */

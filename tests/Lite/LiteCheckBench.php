@@ -131,7 +131,7 @@ class LiteCheckBench extends TestCase
     }
     
     /**
-     * @Revs(10)
+     * @Revs(1000)
      */
     public function benchJaneCacheVersion(): void
     {
@@ -147,7 +147,7 @@ class LiteCheckBench extends TestCase
         $data = $this->getPurcheseObject();
 
         $autoMapper = AutoMapper::create(true, static::$fileLoaderForJane);
-        $autoMapper->map($data, YzenPurchaseDTO::class);
+        $object = $autoMapper->map($data, YzenPurchaseDTO::class);
     }
 
     public function getPurcheseObject(): array
