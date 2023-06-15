@@ -7,8 +7,10 @@
 
 LiteCheckBench:
 
-![telegram-cloud-document-2-5210892105781621235](https://github.com/yzen-dev/php-dto-transform-benchmark/assets/24630195/f639445b-d655-45d5-a60b-dfb10d5e4994)
+<img width="1098" alt="image" src="https://github.com/yzen-dev/php-dto-transform-benchmark/assets/24630195/1d72122b-355a-4994-996f-e5b9e9a896fd">
+
 
 FullCheckBench
 
-![telegram-cloud-document-2-5210892105781620563](https://github.com/yzen-dev/php-dto-transform-benchmark/assets/24630195/5af51cc4-5aae-4c30-aec2-b5dbc992b16d)
+<img width="1154" alt="image" src="https://github.com/yzen-dev/php-dto-transform-benchmark/assets/24630195/40c187bb-19c2-4726-be1e-6f373ecc88b3">
+
