@@ -4,6 +4,7 @@
 4) https://github.com/janephp/automapper
 5) https://github.com/CuyZ/Valinor
 6) https://github.com/yiisoft/hydrator
+7) https://github.com/nutgram/hydrator
 
 LiteCheckBench:
 

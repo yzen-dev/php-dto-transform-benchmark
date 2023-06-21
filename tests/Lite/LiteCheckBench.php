@@ -19,6 +19,7 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Tests\Lite\CuyzDTO\PurchaseDTO as CuyzPurchaseDTO;
 use Tests\Lite\EventSauceDTO\PurchaseDTO as EventSaucePurchaseDTO;
+use Tests\Lite\NutgramDTO\PurchaseDTO as NutgramPurchaseDTO;
 use Tests\Lite\SpatieDTO\PurchaseDTO as SpatiePurchaseDTO;
 use Tests\Lite\YzenDto\PurchaseDTO as YzenPurchaseDTO;
 use Tests\SimpleContainer;
@@ -98,7 +99,7 @@ class LiteCheckBench extends TestCase
     /**
      * @Revs(5000)
      */
-    public function benchSymphonyVersion(): void
+    public function benchSymfonyVersion(): void
     {
         $data = $this->getPurcheseObject();
 
@@ -148,6 +149,15 @@ class LiteCheckBench extends TestCase
 
         $autoMapper = AutoMapper::create(true, static::$fileLoaderForJane);
         $object = $autoMapper->map($data, YzenPurchaseDTO::class);
+    }
+
+    /**
+     * @Revs(5000)
+     */
+    public function benchNutgramVersion(): void
+    {
+        $data = $this->getPurcheseObject();
+        (new \SergiX44\Hydrator\Hydrator())->hydrate(NutgramPurchaseDTO::class, $data);
     }
 
     public function getPurcheseObject(): array

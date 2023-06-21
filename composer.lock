@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e1c521d75bacd7713024c670534f9bb",
+    "content-hash": "e5c77afe76c3b73fbf12cf02e1e0cd83",
     "packages": [
         {
             "name": "cuyz/valinor",
@@ -456,6 +456,66 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.5"
             },
             "time": "2023-05-19T20:20:00+00:00"
+        },
+        {
+            "name": "nutgram/hydrator",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nutgram/hydrator.git",
+                "reference": "ab1734f050edf2455922938c1114ae88affe1a40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nutgram/hydrator/zipball/ab1734f050edf2455922938c1114ae88affe1a40",
+                "reference": "ab1734f050edf2455922938c1114ae88affe1a40",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "psr/container": "^1.1 || ^2.0"
+            },
+            "require-dev": {
+                "league/container": "^4.2",
+                "phpunit/phpunit": "~9.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SergiX44\\Hydrator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergio Brighenti",
+                    "email": "sergio@brighenti.me",
+                    "homepage": "https://github.com/SergiX44"
+                },
+                {
+                    "name": "Anatoly Fenric",
+                    "email": "afenric@gmail.com",
+                    "homepage": "https://github.com/fenric"
+                }
+            ],
+            "description": "Hydrator for PHP 8.0+",
+            "homepage": "https://github.com/nutgram/hydrator",
+            "keywords": [
+                "data-mapper",
+                "dto",
+                "hydrator",
+                "jsonmapper",
+                "mapper",
+                "php8"
+            ],
+            "support": {
+                "issues": "https://github.com/nutgram/hydrator/issues",
+                "source": "https://github.com/nutgram/hydrator/tree/4.0.1"
+            },
+            "time": "2023-05-07T13:13:50+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",

@@ -15,16 +15,15 @@ use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
 use Symfony\Component\Serializer\Mapping\ClassDiscriminatorFromClassMetadata;
 use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
 use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
-use Symfony\Component\Serializer\Normalizer\BackedEnumNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
-use Tests\Full\Dto\PurchaseDto;
-use Tests\Full\JanePhpDto\PurchaseDto as JanePhpDto;
-use Tests\Full\SpatieDto\PurchaseDto as SpatiePurchaseDTO;
-use Tests\Full\EventSauceDto\PurchaseDto as EventSauceDtoDTO;
-use Tests\Full\SymphonyDto\PurchaseDto as SymphonyDto;
 use Tests\Full\CuyzVelinorDto\PurchaseDto as CuyzVelinorDtoDto;
-
+use Tests\Full\Dto\PurchaseDto;
+use Tests\Full\EventSauceDto\PurchaseDto as EventSauceDtoDTO;
+use Tests\Full\JanePhpDto\PurchaseDto as JanePhpDto;
+use Tests\Full\NutgramDTO\PurchaseDTO as NutgramPurchaseDTO;
+use Tests\Full\SpatieDto\PurchaseDto as SpatiePurchaseDTO;
+use Tests\Full\SymphonyDto\PurchaseDto as SymphonyDto;
 use Tests\SimpleContainer;
 use Yiisoft\Hydrator\Hydrator as YiiHydrator;
 
@@ -103,7 +102,7 @@ class FullCheckBench extends TestCase
     /**
      * @Revs(5000)
      */
-    public function benchSymphonyVersion(): void
+    public function benchSymfonyVersion(): void
     {
         $data = $this->getPurcheseObject();
 
@@ -154,6 +153,15 @@ class FullCheckBench extends TestCase
         $autoMapper = AutoMapper::create(true, static::$fileLoaderForJane);
         $object = $autoMapper->map($data, JanePhpDto::class);
         
+    }
+    
+    /**
+     * @Revs(5000)
+     */
+    public function benchNutgramVersion(): void
+    {
+        $data = $this->getPurcheseObject();
+        (new \SergiX44\Hydrator\Hydrator())->hydrate(NutgramPurchaseDTO::class, $data);
     }
 
     public function getPurcheseObject(): array
