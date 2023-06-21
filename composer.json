@@ -29,7 +29,8 @@
     "symfony/property-access": "6.2",
     "symfony/serializer": "6.2",
     "yiisoft/hydrator": "dev-master",
-    "spatie/laravel-data": "^3.6"
+    "spatie/laravel-data": "^3.6",
+    "nutgram/hydrator": "^4.0"
   },
   "require-dev": {
     "phpbench/phpbench": "1.2.8",
