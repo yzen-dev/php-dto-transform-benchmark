@@ -2,7 +2,7 @@
 
 namespace Tests\Full\NutgramDto\Address;
 
-use ClassTransformer\Attributes\ConvertArray;
+use SergiX44\Hydrator\Annotation\ArrayType;
 
 /**
  */
@@ -243,7 +243,6 @@ class AddressClean
     /** @var null|string Нераспознанная часть адреса. Для адреса */
     public ?string $unparsed_parts;
 
-    #[ConvertArray(MetroDto::class)]
-    /** @var array<MetroDto>|MetroDto[] */
+    #[ArrayType(MetroDto::class)]
     public ?array $metro;
 }
